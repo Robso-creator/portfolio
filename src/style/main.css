@@ -1,8 +1,8 @@
 body {
   background: white;
   font-family: "Arial", Times, serif;
-  margin-left: 100px;
-  margin-right: 100px;
+  padding:0;
+  margin: 0;
 }
 
 header {
@@ -10,59 +10,50 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top:32px;
 }
 
-header .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width:1000px;
-}
-
-.logo{
-  height: 175px;
-  width: 175px;
-}
-
-header nav {
+nav {
   display: flex;
   justify-content: center;
 }
 
-header nav a {
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  color: black;
-}
-
-header nav a:hover {
-  color: rgba(42, 42, 42, 0.438);
-  transition: 0.3s ease all;
-}
-
-.download_cv {
+nav a{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
   font-size: 16px;
-  font-weight: bold;
-  border: solid;
-  border-width: 2px;
-  border-color: black;
-  border-radius: 6px;
-  padding: 16px 30px;
-  margin-right: 10px;
-  color: black;
-  background-color: white;
+  line-height: 145%;
+  color: #000000;
+
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.4s ease;
+  padding: 30px;
+  padding-bottom: 15px;
+
 }
 
-.download_cv:hover {
-  background-color: rgba(145, 144, 144, 0.438);
-  transition: 0.5s ease all;
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #FCCC1C;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-.main {
-  height: 800px;
-  background-position: left;
-  background: url("../assets/background_image.png");
-  background-repeat: no-repeat;
+nav a:hover { color: #FCCC1C; }
+nav a:hover::after { width: 40%; }
+
+h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
 }
