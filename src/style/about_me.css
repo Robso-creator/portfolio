@@ -103,13 +103,25 @@
   left: 2px;
 }
 
-@media (min-width: 768px) {
-  .button-53 {
+
+.download_button:active {
+  background-color: #ffd84b;
+    color: #000000;
+  outline: 0;
+}
+
+@media (min-width: 200px) {
+  .download_button {
     padding: .75rem 3rem;
     font-size: 1.25rem;
   }
 }
 
-.social a:hover img {
-    filter: blur(.75px); /* Inverte as cores do SVG */
+@media (max-width: 768px) {
+    #main_content p{
+        max-width: 300px;
+        padding-bottom: 40px;
+    }
 }
+
+

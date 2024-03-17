@@ -79,9 +79,9 @@ hr {
     color: #000000;
 
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     background-color: white;
     padding: 10px;
     opacity: 0;
@@ -112,6 +112,20 @@ hr {
     width:100%;
     background: #FCCC1C;
     z-index: -1;
+}
+
+
+
+@media (max-width: 768px) {
+    #technologies {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #skills_list {
+        flex-direction:column;
+    }
+
 }
 
 
