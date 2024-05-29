@@ -27,6 +27,8 @@
     font-style:normal;
 }
 
+
+@media(min-width: 388px) {
 #main_content h1 b::before {
     content: "";
     position: absolute;
@@ -37,6 +39,7 @@
     transform: skew(-12deg) translateX(-12%);
     background: #FCCC1C;
     z-index: -1;
+}
 }
 
 #main_content p{
@@ -123,5 +126,3 @@
         padding-bottom: 40px;
     }
 }
-
-
