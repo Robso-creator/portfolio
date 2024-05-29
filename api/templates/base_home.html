@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Robson Sampaio | Porfolio</title>
+
+    <link rel="stylesheet" href="../static/css/home/main.css">
+    <link rel="stylesheet" href="../static/css/home/about_me.css">
+    <link rel="stylesheet" href="../static/css/home/skills.css">
+    <link rel="stylesheet" href="../static/css/home/projects.css">
+    <link rel="stylesheet" href="../static/css/home/posts.css">
+    <link rel="stylesheet" href="../static/css/utils/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#about_me">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Projetos</a>
+        <a href="#posts">Posts</a>
+    </nav>
+</header>
+<a href="#" id="voltar-ao-topo">↑</a>
+
+<script>
+    var voltarAoTopoButton = document.getElementById("voltar-ao-topo");
+
+    window.addEventListener("scroll", function() {
+        if (window.pageYOffset > 100) {
+            voltarAoTopoButton.style.display = "block";
+        } else {
+            voltarAoTopoButton.style.display = "none";
+        }
+    });
+
+    voltarAoTopoButton.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+<div id="about_me">
+    <div id="main_content">
+        <h1 class="titulo">Prazer! Sou o <b>Robson.</b></h1>
+        <p class="descricao">
+            Engenheiro de dados e aspirante a cientista de dados.
+            Experiência em desenvolvimento de pipelines de dados desde o ETL até
+            a construção de modelos e deploy em produção.
+        </p>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/robson-allef/" target=”_blank”><img src="../static/assets/social/linkedin.svg"
+                                                                                     alt="Linkedin"></a>
+            <a href="https://github.com/Robso-creator" target=”_blank”><img src="../static/assets/social/github.svg" alt="Github"></a>
+            <a href="https://codigoparatodos.blog/" target=”_blank”><img src="../static/assets/social/blog_icon.svg"
+                                                                         alt="Blog pessoal"></a>
+        </div>
+
+        <a href="cv_robson_sampaio.pdf" download style="text-decoration:none">
+            <button role="button" class="download_button">
+                Baixar CV
+            </button>
+        </a>
+    </div>
+</div>
+
+
+<div id="skills">
+    <h2 class="titulo">Habilidades</h2>
+    <div id="skills_list">
+        <div class="skill">
+            <img src="../static/assets/skills/etl.svg">
+            <h3>ETL</h3>
+            <p>Uso de scripts python para extração, tratamento e carregamento em um banco de dados</p>
+        </div>
+        <div class="skill">
+            <img src="../static/assets/skills/modelagem.svg">
+            <h3>Modelagem de Dados</h3>
+            <p>Modelar e criar infraestrutura de bancos aplicando técnicas mais usadas no mercado</p>
+        </div>
+        <div class="skill">
+            <img src="../static/assets/skills/ciencia.svg">
+            <h3>Ciência de Dados</h3>
+            <p>Construir modelos preditivos e descritivos para trazer inteligencia às tomadas de decisão</p>
+        </div>
+    </div>
+    <hr>
+    <h2 class="technologies">Tecnologias</h2>
+    <p id="tech_desc">Principais tecnologias com que trabalho:</p>
+    <div id="technologies">
+        <div class="image-container">
+            <img src="../static/assets/tech/airflow.svg" alt="">
+            <div class="overlay-text">
+                <b>Apache Airflow</b> é uma plataforma de fluxo de trabalho para agendar, monitorar e gerenciar
+                processos de dados complexos.
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="../static/assets/tech/python.svg" alt="">
+            <div class="overlay-text">
+                <b>Python</b> é uma linguagem de programação de alto nível, interpretada e de propósito geral, conhecida
+                por sua sintaxe simples e legibilidade.
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="../static/assets/tech/git.svg" alt="">
+            <div class="overlay-text">
+                <b>Git</b> é um sistema de controle de versão amplamente utilizado para rastrear alterações
+                no código-fonte durante o desenvolvimento.
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="../static/assets/tech/docker.svg" alt="">
+            <div class="overlay-text">
+                <b>Docker</b> é uma plataforma de código aberto que permite a criação, o envio e a execução de
+                aplicativos em contêineres.
+            </div>
+        </div>
+        <div class="image-container">
+            <span><img src="../static/assets/tech/ubuntu.svg" alt=""></span>
+            <div class="overlay-text">
+                <b>Ubuntu</b> é um sistema operacional de código aberto baseado em Linux, desenvolvido e mantido pela
+                Canonical.
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="../static/assets/tech/aws.svg" alt="">
+            <div class="overlay-text">
+                <b>AWS</b> é uma plataforma de computação em nuvem oferecida pela Amazon.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="projects">
+    <h2 class="titulo">Meus Projetos</h2>
+    <div id="projects_list">
+        <div class="project">
+            <img src="../static/assets/project_placeholder.jpg">
+            <h4>Placeholder</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi placerat, aliquam turpis eget,
+                lacinia nunc. Fusce aliquam porta rutrum. Suspendisse potenti. Sed porta convallis eros, et finibus
+                lacus. Curabitur iaculis maximus pellentesque. Vivamus posuere, eros id convallis tempor, purus justo
+                tincidunt odio, a rhoncus augue sem vitae nisi. Donec eu tellus vel dolor pharetra ornare in eget eros.
+                Proin at fringilla ex. Aliquam venenatis nibh ex, sit amet posuere purus tincidunt vitae.
+            </p>
+            <div class="proj_buttons">
+                <button class="repo_button">Repositório</button>
+            </div>
+        </div>
+        <div class="project">
+            <img src="../static/assets/project_placeholder.jpg">
+            <h4>Placeholder</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi placerat, aliquam turpis eget,
+                lacinia nunc. Fusce aliquam porta rutrum. Suspendisse potenti. Sed porta convallis eros, et finibus
+                lacus. Curabitur iaculis maximus pellentesque. Vivamus posuere, eros id convallis tempor, purus justo
+                tincidunt odio, a rhoncus augue sem vitae nisi. Donec eu tellus vel dolor pharetra ornare in eget eros.
+                Proin at fringilla ex. Aliquam venenatis nibh ex, sit amet posuere purus tincidunt vitae.
+            </p>
+            <button class="repo_button">Repositório</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="posts">
+    <h2 class="titulo">Meus Posts</h2>
+    {% block content %}{% endblock %}
+    <a href="/posts" style="text-decoration: none" target="_blank">
+        <button role="button" class="post_button">
+            Todos os Posts
+        </button>
+    </a>
+</div>
+<footer>
+    <p>&copy; 2024. All Rights Reserved</p>
+    <div id="footer_social">
+        <a href="mailto:contato.robsonallef@gmail.com">
+            <img src="../static/assets/social/email.svg" alt="Ícone de e-mail">
+        </a>
+        <a href="https://www.linkedin.com/in/robson-allef/" target=”_blank”>
+            <img src="../static/assets/social/linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="https://github.com/Robso-creator" target=”_blank”>
+            <img src="../static/assets/social/github.svg" alt="Github">
+        </a>
+    </div>
+</footer>
+</body>
+</html>
