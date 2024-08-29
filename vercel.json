@@ -12,7 +12,7 @@
       "dest": "/api/index.py"
     },
     {
-      "src": "/posts/(.*)",
+      "src": "/posts/hello-world",
       "dest": "/api/index.py"
     }
   ]
