@@ -67,7 +67,7 @@ def blog():
     # Pegar os quatro primeiros posts
     for post in posts_list_ordened:
         string_template = """
-            <a class="post" href="/posts/{POST}" target="_blank">
+            <a class="post" href="/{POST}" target="_blank">
                 <h4>{TITLE}</h4>
                 <p>
                     {RESUME}
@@ -85,7 +85,7 @@ def blog():
     return render_template('blog_posts.html', conteudo_html=content_html)
 
 
-@app.route('/posts/<nome_pagina>')
+@app.route('/<nome_pagina>')
 def post_page(nome_pagina):
     path_post = os.path.join('posts', f'{nome_pagina}.md')
     path_post_placeholder = 'posts/placeholder.md'
