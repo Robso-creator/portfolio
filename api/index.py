@@ -88,7 +88,7 @@ def blog():
 @app.route('/<nome_pagina>')
 def post_page(nome_pagina):
     path_post = os.path.join('posts', f'{nome_pagina}.md')
-    path_post_placeholder = 'posts/placeholder.md'
+    path_post_placeholder = './posts/placeholder.md'
     if os.path.exists(path_post):
         tempo_modificacao = os.path.getmtime(path_post)
         data_modificacao = datetime.fromtimestamp(tempo_modificacao)
