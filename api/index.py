@@ -25,7 +25,6 @@ for post in conteudo_pasta:
         'last_update': datetime.fromtimestamp(os.path.getmtime(f'posts/{post}')),
     }
 
-
     posts_list.append(dict_post)
 
 
