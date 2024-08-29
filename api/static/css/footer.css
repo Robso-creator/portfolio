@@ -1,5 +1,4 @@
 footer {
-    background-color:white;
     display: flex;
     flex-direction:row;
     align-items:center;
@@ -7,7 +6,7 @@ footer {
     max-height: 2rem;
     padding:32px;
     border-top: 1px solid black;
-/*    margin-top:32px;*/
+    margin-top:32px;
 }
 
 footer a{
@@ -33,3 +32,4 @@ footer p{
         font-size:10px
     }
 }
+
