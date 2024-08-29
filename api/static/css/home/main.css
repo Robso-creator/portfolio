@@ -1,0 +1,93 @@
+body {
+    background: white;
+    font-family: "Arial", Times, serif;
+    padding:0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:32px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    color: #000000;
+
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s ease;
+    padding: 30px;
+    padding-bottom: 15px;
+
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #FCCC1C;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+nav a:hover { color: #FCCC1C; }
+nav a:hover::after { width: 40%; }
+
+
+h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+}
+
+p, h1, h2, h3, h4, .overlay-text{
+    cursor:default
+}
+
+
+#voltar-ao-topo {
+    text-decoration:none;
+    font-size:24px;
+    z-index: 999;
+    display: none; /* Esconde o botão por padrão */
+    position: fixed; /* Define a posição fixa */
+    bottom: 100px; /* Define a distância da parte inferior da tela */
+    right: 20px; /* Define a distância da borda direita da tela */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    background-color: #ffd84b; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 50%; /* Adiciona borda arredondada */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+}
+
+#voltar-ao-topo:hover {
+    background-color: #000000;
+    color: #ffd84b;
+}
+
+
+@media (max-width: 480px) {
+    nav a{
+    padding: 16px;
+}
+}
