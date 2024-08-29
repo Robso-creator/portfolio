@@ -67,7 +67,7 @@ def blog():
     # Pegar os quatro primeiros posts
     for post in posts_list_ordened:
         string_template = """
-            <a class="post" href="/{POST}" target="_blank">
+            <a class="post" href="/posts/{POST}" target="_blank">
                 <h4>{TITLE}</h4>
                 <p>
                     {RESUME}
@@ -85,10 +85,9 @@ def blog():
     return render_template('blog_posts.html', conteudo_html=content_html)
 
 
-@app.route('/<nome_pagina>')
+@app.route('/posts/<nome_pagina>')
 def post_page(nome_pagina):
     path_post = os.path.join('posts', f'{nome_pagina}.md')
-    path_post_placeholder = './posts/placeholder.md'
     if os.path.exists(path_post):
         tempo_modificacao = os.path.getmtime(path_post)
         data_modificacao = datetime.fromtimestamp(tempo_modificacao)
@@ -108,11 +107,7 @@ def post_page(nome_pagina):
                 f"##### Última modificação: {data_modificacao.strftime('%Y-%m-%d')}\n\n",
             )
 
-        with open(path_post_placeholder, 'w') as arquivo_md:
-            arquivo_md.writelines(linhas)
-        with open(path_post_placeholder) as arquivo_md:
-            conteudo_md = arquivo_md.read()
-
+        conteudo_md = ''.join(linhas)
         conteudo_html = markdown2.markdown(conteudo_md)
 
         return render_template('post.html', conteudo_html=conteudo_html)
