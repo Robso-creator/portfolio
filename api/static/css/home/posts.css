@@ -1,63 +1,58 @@
-#about_me {
-    margin: 0;
-    padding:32px;
+#posts {
+    background-color:black;
+    color:white;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-bottom:32px
 }
 
-#main_content {
+#posts_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas com larguras iguais */
+    gap: 20px; /* Define o espaçamento entre as colunas */
+    justify-content: center; /* Centraliza os projetos na grade */
+}
+
+#posts_list a {
+    background-color:white;
+    color: black;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.post {
     display:flex;
     flex-direction:column;
-    text-align: center;
     align-items:center;
+    text-align: center;
+    padding: 24px;
+    margin:24px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    max-width:400px;
+    border-radius:8px;
 }
 
-#main_content h1{
-    font-family: 'Inter';
+.post h4 {
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 58px;
-    line-height: 70px;
-    color: #0B0C0C;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    cursor:inherit
 }
 
-#main_content h1 b{
-    padding: 30px 0 8px;
-    position: relative;
-    font-weight: 600;
-    font-style:normal;
-}
-
-#main_content h1 b::before {
-    content: "";
-    position: absolute;
-    left: 7%;
-    bottom: 16px;
-    width: 150px;
-    height: 14px;
-    transform: skew(-12deg) translateX(-12%);
-    background: #FCCC1C;
-    z-index: -1;
-}
-
-#main_content p{
-    margin: 0;
-    width: 645px;
-    height: 101px;
+.post p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
-    text-align: center;
-    color: #323433;
+    cursor:inherit
 }
 
-#main_content img{
-    width: 48px;
-    height: 48px;
-}
 
-.download_button {
+.post_button {
     background-color: #FCCC1C;
     border: 0 solid #E5E7EB;
     box-sizing: border-box;
@@ -84,42 +79,44 @@
     margin: 32px;
 }
 
-.download_button:focus {
+.post_button:focus {
   outline: 0;
 }
 
-.download_button:after {
+.post_button:after {
   content: '';
   position: absolute;
-  border: 1px solid #000000;
+  border: 1.2px solid #FFFFFF;
   bottom: 4px;
   left: 4px;
   width: calc(100% - 1px);
   height: calc(100% - 1px);
 }
 
-.download_button:hover:after {
+.post_button:hover:after {
   bottom: 2px;
   left: 2px;
 }
 
 
-.download_button:active {
+.post_button:active {
   background-color: #ffd84b;
     color: #000000;
   outline: 0;
 }
-
-@media (min-width: 200px) {
-  .download_button {
-    padding: .75rem 3rem;
-    font-size: 1.25rem;
-  }
+@media (min-width: 768px) and (max-width: 1000px) {
+        #posts_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
+
 @media (max-width: 768px) {
-    #main_content p{
+    #posts_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .post {
         max-width: 300px;
-        padding-bottom: 40px;
     }
 }

@@ -50,6 +50,7 @@ nav a::after {
 nav a:hover { color: #FCCC1C; }
 nav a:hover::after { width: 40%; }
 
+
 h2 {
     font-family: 'Inter';
     font-style: normal;
@@ -82,4 +83,11 @@ p, h1, h2, h3, h4, .overlay-text{
 #voltar-ao-topo:hover {
     background-color: #000000;
     color: #ffd84b;
+}
+
+
+@media (max-width: 480px) {
+    nav a{
+    padding: 16px;
+}
 }
