@@ -15,21 +15,5 @@
       "src": "/posts/(.*)",
       "dest": "/api/index.py"
     }
-  ],
-  "rewrites": [],
-  "cleanUrls": false,
-  "crons": [],
-  "git": {},
-  "public": false,
-  "scope": "",
-  "headers": [],
-  "github": {},
-  "env": {},
-  "functionFailoverRegions": [],
-  "trailingSlash": false,
-  "framework": "blitzjs",
-  "build": {},
-  "passiveRegions": [],
-  "redirects": [],
-  "name": ""
+  ]
 }
