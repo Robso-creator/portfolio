@@ -1,7 +1,35 @@
 {
   "version": 2,
-  "builds": [{"src":  "api/index.py", "use":  "@vercel/python"}],
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.py" }
-  ]
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/posts/(.*)",
+      "dest": "/api/index.py"
+    }
+  ],
+  "rewrites": [],
+  "cleanUrls": false,
+  "crons": [],
+  "git": {},
+  "public": false,
+  "scope": "",
+  "headers": [],
+  "github": {},
+  "env": {},
+  "functionFailoverRegions": [],
+  "trailingSlash": false,
+  "framework": "blitzjs",
+  "build": {},
+  "passiveRegions": [],
+  "redirects": [],
+  "name": ""
 }
