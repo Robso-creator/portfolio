@@ -16,7 +16,7 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    text-align: center;
+    text-align: justify;
     padding: 24px;
     margin:24px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -26,6 +26,7 @@
 
 .project h4 {
     font-family: 'Poppins';
+    text-align: center;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -39,7 +40,9 @@
     line-height: 150%;
 }
 .project img {
+    width: 100%;
     max-width:380px;
+    height: auto;
 }
 
 .repo_button {
