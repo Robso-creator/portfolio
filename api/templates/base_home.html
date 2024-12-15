@@ -38,7 +38,7 @@
 <script>
     var voltarAoTopoButton = document.getElementById("voltar-ao-topo");
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (window.pageYOffset > 100) {
             voltarAoTopoButton.style.display = "block";
         } else {
@@ -46,8 +46,8 @@
         }
     });
 
-    voltarAoTopoButton.addEventListener("click", function() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    voltarAoTopoButton.addEventListener("click", function () {
+        window.scrollTo({top: 0, behavior: "smooth"});
     });
 </script>
 <div id="about_me">
@@ -60,9 +60,11 @@
         </p>
 
         <div class="social">
-            <a href="https://www.linkedin.com/in/robson-allef/" target=”_blank”><img src="../static/assets/social/linkedin.svg"
-                                                                                     alt="Linkedin"></a>
-            <a href="https://github.com/Robso-creator" target=”_blank”><img src="../static/assets/social/github.svg" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/robson-allef/" target=”_blank”><img
+                    src="../static/assets/social/linkedin.svg"
+                    alt="Linkedin"></a>
+            <a href="https://github.com/Robso-creator" target=”_blank”><img src="../static/assets/social/github.svg"
+                                                                            alt="Github"></a>
             <a href="https://codigoparatodos.blog/" target=”_blank”><img src="../static/assets/social/blog_icon.svg"
                                                                          alt="Blog pessoal"></a>
         </div>
@@ -102,25 +104,29 @@
         <div class="image-container">
             <img src="../static/assets/tech/airflow.svg" alt="">
             <div class="overlay-text">
-                <b>Apache Airflow</b> is a workflow platform for scheduling, monitoring, and managing complex data processes.
+                <b>Apache Airflow</b> is a workflow platform for scheduling, monitoring, and managing complex data
+                processes.
             </div>
         </div>
         <div class="image-container">
             <img src="../static/assets/tech/python.svg" alt="">
             <div class="overlay-text">
-                <b>Python</b> is a high-level, interpreted, general-purpose programming language, known for its simple syntax and readability.
+                <b>Python</b> is a high-level, interpreted, general-purpose programming language, known for its simple
+                syntax and readability.
             </div>
         </div>
         <div class="image-container">
             <img src="../static/assets/tech/git.svg" alt="">
             <div class="overlay-text">
-                <b>Git</b> is a widely used version control system for tracking changes in source code during development.
+                <b>Git</b> is a widely used version control system for tracking changes in source code during
+                development.
             </div>
         </div>
         <div class="image-container">
             <img src="../static/assets/tech/docker.svg" alt="">
             <div class="overlay-text">
-                <b>Docker</b> is an open-source platform that enables the creation, deployment, and execution of applications in containers.
+                <b>Docker</b> is an open-source platform that enables the creation, deployment, and execution of
+                applications in containers.
             </div>
         </div>
         <div class="image-container">
@@ -156,6 +162,24 @@
             </p>
             <div class="proj_buttons">
                 <a href="https://github.com/Robso-creator/etl_mobilidade" target=”_blank” style="text-decoration:none">
+                    <button class="repo_button">Repo</button>
+                </a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="../static/assets/project_2.png">
+            <h4>Versioned PostgreSQL DB Management with Alembic and SQLAlchemy</h4>
+            <p>
+                This Python project involves creating a versioned PostgreSQL database using Alembic and SQLAlchemy.
+                The aim is to manage database migrations efficiently by leveraging Alembic's capabilities for handling
+                schema changes in a version-controlled manner. SQLAlchemy is utilized for its powerful ORM
+                (Object-Relational Mapping) features, allowing seamless interaction with the PostgreSQL database.
+                This setup ensures that database schema modifications are tracked and applied consistently across
+                different environments, facilitating robust and scalable database management.
+            </p>
+            <div class="proj_buttons">
+                <a href="https://github.com/Robso-creator/versionated_database" target=”_blank”
+                   style="text-decoration:none">
                     <button class="repo_button">Repo</button>
                 </a>
             </div>
