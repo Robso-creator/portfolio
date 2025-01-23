@@ -25,12 +25,6 @@ repos:
     hooks:
       - id: rm-unneeded-f-str
         description: Find and replace unneeded f-strings in your code
-  - repo: https://github.com/hadialqattan/pycln
-    rev: v2.4.0
-    hooks:
-      - id: pycln
-        description: Formatter for finding and removing unused import statements
-        args: [ "--all" ]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v3.1.0
     hooks:
