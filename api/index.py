@@ -1,4 +1,5 @@
 import os
+import subprocess
 from datetime import datetime
 
 import markdown2
@@ -85,12 +86,24 @@ def blog():
     return render_template('blog_posts.html', conteudo_html=content_html)
 
 
+def get_file_last_modified(path):
+    try:
+        result = subprocess.run(
+            ['git', 'log', '-1', '--format=%cd', '--date=unix', path],
+            capture_output=True,
+            text=True,
+        )
+        timestamp = int(result.stdout.strip())
+        return datetime.fromtimestamp(timestamp)
+    except:
+        return datetime.now()
+
 @app.route('/posts/<nome_pagina>')
 def post_page(nome_pagina):
     path_post = os.path.join('posts', f'{nome_pagina}.md')
     if os.path.exists(path_post):
         tempo_modificacao = os.path.getmtime(path_post)
-        data_modificacao = datetime.fromtimestamp(tempo_modificacao)
+        data_modificacao = get_file_last_modified(path_post)
 
         with open(path_post) as arquivo_md:
             linhas = arquivo_md.readlines()
