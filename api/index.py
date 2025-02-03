@@ -104,7 +104,7 @@ def post_page(nome_pagina):
         if indice_titulo is not None:
             linhas.insert(
                 indice_titulo + 1,
-                f"##### Última modificação: {data_modificacao.strftime('%Y-%m-%d')}\n\n",
+                f"##### Last modified: {data_modificacao.strftime('%Y-%m-%d')}\n\n",
             )
 
         conteudo_md = ''.join(linhas)
