@@ -4,9 +4,8 @@ footer {
     align-items:center;
     justify-content:space-between;
     max-height: 2rem;
-    padding:32px;
+    padding: 16px;
     border-top: 1px solid black;
-    margin-top:32px;
 }
 
 footer a{
@@ -25,7 +24,7 @@ footer p{
 
 @media (max-width: 768px) {
     footer img{
-        max-height: 24px;
+        max-height: 24px !important;
     }
 
     footer p{
