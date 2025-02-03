@@ -102,7 +102,6 @@ def get_file_last_modified(path):
 def post_page(nome_pagina):
     path_post = os.path.join('posts', f'{nome_pagina}.md')
     if os.path.exists(path_post):
-        tempo_modificacao = os.path.getmtime(path_post)
         data_modificacao = get_file_last_modified(path_post)
 
         with open(path_post) as arquivo_md:
