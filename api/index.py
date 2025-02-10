@@ -8,6 +8,20 @@ from flask import render_template
 
 app = Flask(__name__)
 
+
+def get_file_last_modified(path):
+    try:
+        result = subprocess.run(
+            ['git', 'log', '-1', '--format=%cd', '--date=unix', path],
+            capture_output=True,
+            text=True,
+        )
+        timestamp = int(result.stdout.strip())
+        return datetime.fromtimestamp(timestamp)
+    except:
+        return datetime.now()
+
+
 conteudo_pasta = os.listdir('posts')
 conteudo_pasta.remove('placeholder.md')
 
@@ -23,7 +37,7 @@ for post in conteudo_pasta:
         'title': paragrafos[0].replace('<h1>', '').replace('</h1>', ''),
         'resume': ' '.join(texto.split('\n\n')[1].split()[:100]).replace('<p>', '').replace('</p>', ''),
         'post': post,
-        'last_update': datetime.fromtimestamp(os.path.getmtime(f'posts/{post}')),
+        'last_update': get_file_last_modified(f'posts/{post}'),
     }
 
     posts_list.append(dict_post)
@@ -85,18 +99,6 @@ def blog():
 
     return render_template('blog_posts.html', conteudo_html=content_html)
 
-
-def get_file_last_modified(path):
-    try:
-        result = subprocess.run(
-            ['git', 'log', '-1', '--format=%cd', '--date=unix', path],
-            capture_output=True,
-            text=True,
-        )
-        timestamp = int(result.stdout.strip())
-        return datetime.fromtimestamp(timestamp)
-    except:
-        return datetime.now()
 
 @app.route('/posts/<nome_pagina>')
 def post_page(nome_pagina):
